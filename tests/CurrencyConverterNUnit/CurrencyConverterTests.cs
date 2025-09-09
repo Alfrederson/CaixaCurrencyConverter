@@ -24,7 +24,9 @@
         public void ConvertAtoB()
         {
             var result = _converter.Convert(new Money(1.0m, Currency.USD), Currency.BRL);
-            Assert.That(result.Amount,Is.EqualTo(2.0m));
+            Assert.That(result.Amount, Is.EqualTo(2.0m));
+            Assert.That(result.Currency, Is.EqualTo(Currency.BRL));
+            
         }
 
         [Test]

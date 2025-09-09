@@ -25,6 +25,7 @@
         {
             var result = _converter.Convert(new Money(1.0m, Currency.USD), Currency.BRL);
             Assert.AreEqual(2.0m, result.Amount);
+            Assert.AreEqual(Currency.BRL, result.Currency);
         }
         [TestMethod]
         public void ConvertAToBToA_ShouldYieldOriginalValue()

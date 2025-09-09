@@ -7,8 +7,7 @@
 
         public Money(decimal amount, Currency currency)
         {
-            if (amount < 0)
-                throw new ArgumentOutOfRangeException(nameof(amount));
+            ArgumentOutOfRangeException.ThrowIfNegative(amount);
 
             this.Amount = amount;
             this.Currency = currency;

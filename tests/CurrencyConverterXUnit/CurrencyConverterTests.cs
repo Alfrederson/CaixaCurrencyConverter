@@ -28,6 +28,8 @@ namespace CurrencyConverterMsTest
         {
             var result = _converter.Convert(new Money(1.0m, Currency.USD), Currency.BRL);
             Assert.Equal(2.0m, result.Amount);
+            Assert.Equal(Currency.BRL, result.Currency);
+
         }
         [Fact]
         public void ConvertingAToBToA_ShouldYieldOriginalValue()
